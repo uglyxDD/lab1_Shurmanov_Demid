@@ -597,17 +597,23 @@ public void rightTriangle(int x) {
 
 **Код решение:**
 ```java
-public void rightTriangle(int x) {
-    for (int i = 1; i <= x; i++) {
-        for (int j = 0; j < x - i; j++) {
-            System.out.print(" ");
-        }
-        for (int j = 0; j < i; j++) {
-            System.out.print("*");
-        }
-        System.out.println();
-    }
+System.out.println("Введите количество элементов массива: ");
+int n = scanner.nextInt();
+int[] arr = new int[n];
+System.out.println("Введите элементы массива: ");
+for (int i = 0; i < n; i++) {
+    arr[i] = scanner.nextInt();
 }
+System.out.println("Введите число для поиска: ");
+int arr_num = scanner.nextInt();
+Test t = new Test();
+int index = t.findFirst(arr, x);
+if (index != -1) {
+    System.out.println("Первое вхождение числа " + x + " находится под индексом: " + index);
+}
+else {
+    System.out.println("Число " + x + " в массиве не найдено.");
+    }
 ```
 
 **Код реализация:**
