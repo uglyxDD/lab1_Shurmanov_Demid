@@ -595,7 +595,7 @@ public void rightTriangle(int x) {
 1. В строке `i` сначала напечатать `(x-i)` пробелов.  
 2. Затем `i` символов `*`.
 
-**Код решение:**
+**Код реализации:**
 ```java
 System.out.println("Введите количество элементов массива: ");
 int n = scanner.nextInt();
@@ -607,16 +607,14 @@ for (int i = 0; i < n; i++) {
 System.out.println("Введите число для поиска: ");
 int arr_num = scanner.nextInt();
 Test t = new Test();
-int index = t.findFirst(arr, x);
+int index = t.findFirst(arr, arr_num);
 if (index != -1) {
     System.out.println("Первое вхождение числа " + x + " находится под индексом: " + index);
-}
-else {
+} else {
     System.out.println("Число " + x + " в массиве не найдено.");
-    }
 ```
 
-**Код реализация:**
+**Код решения:**
 ```java\
 public int findFirst(int[] arr, int x) {
     for (int i = 0; i < arr.length; i++) {  // проходим по каждому элементу массива
